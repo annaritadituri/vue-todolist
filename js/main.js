@@ -34,7 +34,10 @@ const { createApp } = Vue
         
         //MILESTONE 2
         removeElement(position) {
-            this.toDoList.splice(position, 1);
+
+            //this.toDoList.splice(position, 1);
+            this.toDoList = this.toDoList.filter((_, index) => index !== position);
+ 
         },
 
         //MILESTONE 3
