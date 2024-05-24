@@ -46,6 +46,18 @@ const { createApp } = Vue
             }
 
             this.toDoList.push(plusItem);
+
+        },
+
+        //BONUS 2
+        checkItem(position) {
+
+            if(this.toDoList[position].done === false) {
+                this.toDoList[position].done = true;
+            } else {
+                this.toDoList[position].done = false;
+            }
+            
         }
 
     }

@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <div id="app">
+    <div id="app" v-cloak>
 
         <!--MILESTONE 1-->
         <ul>
@@ -22,7 +22,12 @@
                 >
                     x
                 </button>
-                <span>{{ item.text }}</span>
+                <!--BONUS 2-->
+                <span
+                    @mousedown="checkItem(index)"
+                >
+                    {{ item.text }}
+                </span>
             </li>
         </ul>
 
@@ -31,6 +36,7 @@
             type="text"
             id="add-to-list"
             v-model="addedItem"
+            @keyup.enter="addElement(addedItem)"
         >
         <button @click="addElement(addedItem)">Aggiungi</button>
 

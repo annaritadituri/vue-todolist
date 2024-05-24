@@ -40,5 +40,16 @@ MILESTONE 2
 MILESTONE 3
 -->
 -Aggiungere nell'HTML un input sfruttando il v-model per salvare il testo digitato
---Creare un button con un evento click che scatena la funzione addElement
+--Creare un button con un evento click che scatena la funzione addElement()
 ---La funzione prende in input il testo scritto nel campo di input, crea un oggetto che andrà ad aggiungere all'array "toDoList" con il metodo push che avrà come valore della proprietà "text" l'input e come valore "done" di default false
+
+<!--
+BONUS 1
+-->
+-Aggiungere l'evento keyup che ascolta solo il tasto enter e scatena la stessa funzione del button "Aggiungi", addElement()
+
+<!--
+BONUS 2
+-->
+-Aggiungere all'elemento HTML span in cui è presente il testo del to-do, l'evento mousedown che scatena la funzione checkItem()
+--La funzione controlla lo il valore della proprietà done dell'oggetto "item" e lo inverte
