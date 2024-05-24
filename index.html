@@ -3,17 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Vue TODO List</title>
 </head>
 <body>
     
-    <div id="app">{{ message }}</div>
+    <div id="app">
+
+        <ul>
+            <li
+                v-for="item in toDoList"
+                :class="{checked: item.done}"
+            >
+                {{ item.text }}
+            </li>
+        </ul>
+
+    </div>
 
 
     <!--inclusion js-->
 		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script src="./js/main.js" type="text/javascript"></script>
     <!--inclusion js-->
-    
+
 </body>
 </html>

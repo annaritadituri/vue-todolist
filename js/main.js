@@ -7,7 +7,24 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        message: 'Hello Vue!'
+
+        toDoList: [
+            {
+                text: 'Comprare il pane',
+                done: true,
+            },
+
+            {
+                text: 'Spolverare',
+                done: false,
+            },
+
+            {
+                text: 'Leggere 10 pag',
+                done: true,
+            },
+        ],
+
       }
     }
   }).mount('#app')

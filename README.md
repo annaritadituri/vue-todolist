@@ -17,3 +17,15 @@ Bonus:
 1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 -->
+
+<!--
+CREARE UN ARRAY LIST DI OGGETTI PER OGNI SINGOLA TODO
+-->
+-Creare un array "toDoList" di oggetti per ogni singola todo, con due proprietà: text, per il testo del todo; done, con valore true/false
+
+<!--
+MILESTONE 1
+-->
+-Creare un ul con all'interno un li nell'HTML
+--Inserire un v-for per scorrere la toDoList nel li
+---Usare il v-bind:class per aggiungere una classe "checked" nel caso in cui la proprietà "done" == true
