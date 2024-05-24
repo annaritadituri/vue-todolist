@@ -36,9 +36,10 @@
             type="text"
             id="add-to-list"
             v-model="addedItem"
-            @keyup.enter="addElement(addedItem)"
+            placeholder="Scrivi nuovo TODO"
+            @keyup.enter="addElement()"
         >
-        <button @click="addElement(addedItem)">Aggiungi</button>
+        <button @click="addElement()">Aggiungi</button>
 
     </div>
 

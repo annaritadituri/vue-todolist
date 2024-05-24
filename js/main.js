@@ -38,14 +38,19 @@ const { createApp } = Vue
         },
 
         //MILESTONE 3
-        addElement(addedItem) {
+        addElement() {
 
-            const plusItem = {
-                text: addedItem,
-                done: false,
+            if (this.addedItem !== '') {
+
+                const plusItem = {
+                    text: this.addedItem,
+                    done: false,
+                }
+    
+                this.toDoList.push(plusItem);
+                this.addedItem = '';
+
             }
-
-            this.toDoList.push(plusItem);
 
         },
 
