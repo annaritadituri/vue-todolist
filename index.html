@@ -26,6 +26,14 @@
             </li>
         </ul>
 
+        <label for="add-to-list">Nuovo TODO</label>
+        <input
+            type="text"
+            id="add-to-list"
+            v-model="addedItem"
+        >
+        <button @click="addElement(addedItem)">Aggiungi</button>
+
     </div>
 
 

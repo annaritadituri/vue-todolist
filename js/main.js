@@ -24,6 +24,7 @@ const { createApp } = Vue
                 done: true,
             },
         ],
+        addedItem: '',
 
       }
 
@@ -34,6 +35,17 @@ const { createApp } = Vue
         //MILESTONE 2
         removeElement(position) {
             this.toDoList.splice(position, 1);
+        },
+
+        //MILESTONE 3
+        addElement(addedItem) {
+
+            const plusItem = {
+                text: addedItem,
+                done: false,
+            }
+
+            this.toDoList.push(plusItem);
         }
 
     }

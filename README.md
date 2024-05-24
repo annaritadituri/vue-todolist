@@ -35,3 +35,10 @@ MILESTONE 2
 -->
 -Aggiungere in methods removeElement(), che utilizza il metodo splice per rimuovere un elemento in una posizione precisa
 --Aggiungere nell'HTML un button che richiama la funzione removeElement() al click
+
+<!--
+MILESTONE 3
+-->
+-Aggiungere nell'HTML un input sfruttando il v-model per salvare il testo digitato
+--Creare un button con un evento click che scatena la funzione addElement
+---La funzione prende in input il testo scritto nel campo di input, crea un oggetto che andrà ad aggiungere all'array "toDoList" con il metodo push che avrà come valore della proprietà "text" l'input e come valore "done" di default false
