@@ -26,5 +26,15 @@ const { createApp } = Vue
         ],
 
       }
+
+    },
+
+    methods: {
+        
+        //MILESTONE 2
+        removeElement(position) {
+            this.toDoList.splice(position, 1);
+        }
+
     }
   }).mount('#app')

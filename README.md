@@ -29,3 +29,9 @@ MILESTONE 1
 -Creare un ul con all'interno un li nell'HTML
 --Inserire un v-for per scorrere la toDoList nel li
 ---Usare il v-bind:class per aggiungere una classe "checked" nel caso in cui la proprietà "done" == true
+
+<!--
+MILESTONE 2
+-->
+-Aggiungere in methods removeElement(), che utilizza il metodo splice per rimuovere un elemento in una posizione precisa
+--Aggiungere nell'HTML un button che richiama la funzione removeElement() al click

@@ -10,12 +10,19 @@
     
     <div id="app">
 
+        <!--MILESTONE 1-->
         <ul>
             <li
-                v-for="item in toDoList"
+                v-for="(item, index) in toDoList"
                 :class="{checked: item.done}"
             >
-                {{ item.text }}
+                <!--MILESTONE 2-->
+                <button
+                    @click="removeElement(index)"
+                >
+                    x
+                </button>
+                <span>{{ item.text }}</span>
             </li>
         </ul>
 
