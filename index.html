@@ -11,7 +11,17 @@
     <div id="app" v-cloak>
 
         <!--MILESTONE 1-->
-        <ul>
+        <ul
+            v-if="list === false"
+        >
+            <li
+                v-for="(item, index) in filteredArray"
+                :class="{checked: item.done}"
+            >
+                {{ item.text }}
+            </li>
+        </ul>
+        <ul v-else>
             <li
                 v-for="(item, index) in toDoList"
                 :class="{checked: item.done}"
@@ -31,6 +41,7 @@
             </li>
         </ul>
 
+        <!--MILESTONE 3-->
         <label for="add-to-list">Nuovo TODO</label>
         <input
             type="text"
@@ -41,6 +52,22 @@
         >
         <button @click="addElement()">Aggiungi</button>
 
+        <!--BONUS 3-->
+        <div class="searchInput">
+
+            <label for="search-todo"></label>
+            <input
+                type="text"
+                id="search-todo"
+                v-model="searchedItem"
+                placeholder="Cerca TODO"
+                @keyup.enter="clearInput()"
+                @keyup="searchElement($event)"
+            >
+            <button @click="clearInput()">Cerca</button>
+
+        </div>
+        
     </div>
 
 

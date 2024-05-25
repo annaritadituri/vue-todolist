@@ -25,6 +25,9 @@ const { createApp } = Vue
             },
         ],
         addedItem: '',
+        searchedItem: '',
+        filteredArray: [],
+        list: true,
 
       }
 
@@ -66,7 +69,30 @@ const { createApp } = Vue
                 this.toDoList[position].done = false;
             }
             
-        }
+        },
+
+        //BONUS 3
+        searchElement(event) {
+
+            if(event.key !== "Enter") {
+
+                this.list = false;
+                console.log(this.searchedItem);
+                this.filteredArray = this.toDoList.filter((todo) => todo.text.includes(this.searchedItem));
+                console.log(this.filteredArray);
+
+            }
+            
+        },
+
+        clearInput() {
+
+            this.toDoList = this.filteredArray;
+            this.searchedItem = '';
+            console.log(this.filteredArray);
+            this.list = true;
+            
+        },
 
     }
   }).mount('#app')

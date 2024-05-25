@@ -16,6 +16,7 @@ Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul p
 Bonus:
 1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
+3- creare un campo di testo per ricercare i task. la ricerca avviene ad ogni lettera inserita
 -->
 
 <!--
@@ -53,3 +54,12 @@ BONUS 2
 -->
 -Aggiungere all'elemento HTML span in cui è presente il testo del to-do, l'evento mousedown che scatena la funzione checkItem()
 --La funzione controlla lo il valore della proprietà done dell'oggetto "item" e lo inverte
+
+<!--
+BONUS 3
+-->
+-Aggiungere all'elemento HTML input un v-model per l'elemento cercato
+--Aggiungere l'evento keyup che passa in input l'e e scatena la funzione searchElement()
+---La funzione crea un nuovo array di toDoList con il metodo filter e aggiunge solo gli elementi in cui c'è una corrispondenza con la lettera inserita
+----Aggiungere l'evento keyup che ascolta solo il tasto enter e scatena la funzione clearInput() per svuotare il campo di input e concludere la ricerca
+-----Aggiungere un button a cui diamo la stessa funzione dell'enter
